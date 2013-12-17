@@ -118,11 +118,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\StructuremapMvc.cs" />
-    <Compile Include="Areas\Products\Controllers\ProductsController.cs" />
-    <Compile Include="Areas\Products\Handlers\ShowProductHandler.cs" />
-    <Compile Include="Areas\Products\Models\ShowProductViewModel.cs" />
-    <Compile Include="Areas\Products\ProductsAreaRegistration.cs" />
-    <Compile Include="Areas\Products\Queries\ShowProductQuery.cs" />
+    <Compile Include="Areas\ShowProduct\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\ShowProduct\Handlers\ShowProductHandler.cs" />
+    <Compile Include="Areas\ShowProduct\Models\ShowProductViewModel.cs" />
+    <Compile Include="Areas\ShowProduct\ShowProductAreaRegistration.cs" />
+    <Compile Include="Areas\ShowProduct\Queries\ShowProductQuery.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyResolver.cs" />
@@ -148,14 +148,18 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Products\Views\Shared\" />
+    <Folder Include="Areas\ShowProduct\Commands\" />
+    <Folder Include="Areas\ShowProduct\Img\" />
+    <Folder Include="Areas\ShowProduct\Js\" />
+    <Folder Include="Areas\ShowProduct\Less\" />
+    <Folder Include="Areas\ShowProduct\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Products\Views\Web.config" />
+    <Content Include="Areas\ShowProduct\Views\Web.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Valtech.Cqrs\Valtech.Cqrs.csproj">
@@ -164,7 +168,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Areas\Products\Views\Products\Index.cshtml" />
+    <Content Include="Areas\ShowProduct\Views\Products\Index.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

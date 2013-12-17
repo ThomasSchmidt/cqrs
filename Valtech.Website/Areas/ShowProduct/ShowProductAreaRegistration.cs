@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace Valtech.Website.Areas.Products
+namespace Valtech.Website.Areas.ShowProduct
 {
 	public class ProductsAreaRegistration : AreaRegistration
 	{
@@ -8,15 +8,15 @@ namespace Valtech.Website.Areas.Products
 		{
 			get
 			{
-				return "Products";
+				return "ShowProduct";
 			}
 		}
 
 		public override void RegisterArea(AreaRegistrationContext context)
 		{
 			context.MapRoute(
-				"Products_default",
-				"Products/{controller}/{action}/{id}",
+				"ShowProduct_default",
+				"ShowProduct/{controller}/{action}/{id}",
 				new { action = "Index", id = UrlParameter.Optional }
 			);
 		}
