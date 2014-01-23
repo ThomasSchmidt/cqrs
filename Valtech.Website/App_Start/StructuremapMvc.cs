@@ -23,21 +23,40 @@ using Valtech.Website.DependencyResolution;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(Valtech.Website.App_Start.StructuremapMvc), "Start")]
 
-namespace Valtech.Website.App_Start {
-    public static class StructuremapMvc {
-        public static void Start() {
-			IContainer container = IoC.Initialize();
-            DependencyResolver.SetResolver(new StructureMapDependencyResolver(container));
-            GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(container);
-
+namespace Valtech.Website.App_Start 
+{
+    public static class StructuremapMvc 
+	{
+        public static void Start() 
+		{
 			ObjectFactory.Initialize(i => i.Scan(s =>
 			{
 				s.AssemblyContainingType<IMediator>();
 				s.TheCallingAssembly();
 				s.WithDefaultConventions();
-				s.ConnectImplementationsToTypesClosing((typeof(IQueryHandler<,>)));
-				s.AddAllTypesOf(typeof(ICommandHandler<>));
-			}));  
+				s.AddAllTypesOf(typeof(IQueryHandler<,>));
+				s.AddAllTypesOf(typeof(ICommandHandler<,>));
+			}));
+
+	        IContainer container = ObjectFactory.Container;
+
+            DependencyResolver.SetResolver(new StructureMapDependencyResolver(ObjectFactory.Container));
+            GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(ObjectFactory.Container);
+
+
+			//ObjectFactory.Initialize(i => i.Scan(s =>
+			//{
+			//	s.AssemblyContainingType<IMediator>();
+			//	s.TheCallingAssembly();
+			//	s.WithDefaultConventions();
+			//	s.ConnectImplementationsToTypesClosing((typeof(IQueryHandler<,>)));
+			//	s.AddAllTypesOf(typeof(ICommandHandler<>));
+			//}));
+
+			//container.Configure(c =>
+			//{
+			//	c.For<IMediator>().Use<Mediator>();
+			//});
         }
     }
 }

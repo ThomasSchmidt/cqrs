@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Valtech.Cqrs
 {
-	public interface ICommandHandler<in TCommand>
+	public interface ICommandHandler<in TCommand, out TResponse>
 	{
-		void Handle(ICommand command);
+		TResponse Handle(TCommand command);
 	}
 }

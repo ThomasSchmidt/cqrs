@@ -12,7 +12,7 @@ namespace Valtech.Website.Areas.Products.Handlers
 	{
 		public ShowProductViewModel Handle(ShowProductQuery query)
 		{
-			return new ShowProductViewModel();
+			return new ShowProductViewModel{ProductName = "created in ShowProductHandler"};
 		}
 	}
 }
