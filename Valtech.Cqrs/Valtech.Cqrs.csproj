@@ -50,7 +50,7 @@
     <Compile Include="Mediator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SomeService\ISomeService.cs" />
-    <Compile Include="SomeService\SomeServiceImp.cs" />
+    <Compile Include="SomeService\SomeService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
