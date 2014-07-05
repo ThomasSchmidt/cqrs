@@ -10,7 +10,7 @@ namespace Valtech.Cqrs.SomeService
 	{
 		public string DoSomeThing()
 		{
-			return "in DoSomeThing()";
+			return "in DoSomeThing() now with extra text";
 		}
 	}
 }
