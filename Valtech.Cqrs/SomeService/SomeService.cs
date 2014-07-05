@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Valtech.Cqrs.SomeService
 {
-	public class SomeServiceImp : ISomeService
+	public class SomeService : ISomeService
 	{
 		public string DoSomeThing()
 		{

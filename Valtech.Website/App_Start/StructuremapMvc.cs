@@ -42,21 +42,6 @@ namespace Valtech.Website.App_Start
 
             DependencyResolver.SetResolver(new StructureMapDependencyResolver(ObjectFactory.Container));
             GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(ObjectFactory.Container);
-
-
-			//ObjectFactory.Initialize(i => i.Scan(s =>
-			//{
-			//	s.AssemblyContainingType<IMediator>();
-			//	s.TheCallingAssembly();
-			//	s.WithDefaultConventions();
-			//	s.ConnectImplementationsToTypesClosing((typeof(IQueryHandler<,>)));
-			//	s.AddAllTypesOf(typeof(ICommandHandler<>));
-			//}));
-
-			//container.Configure(c =>
-			//{
-			//	c.For<IMediator>().Use<Mediator>();
-			//});
         }
     }
 }

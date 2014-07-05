@@ -1,0 +1,8 @@
+C:\git\CQRS\Valtech.Cqrs\bin\Debug\Valtech.Cqrs.dll
+C:\git\CQRS\Valtech.Cqrs\bin\Debug\Valtech.Cqrs.pdb
+C:\git\CQRS\Valtech.Cqrs\bin\Debug\StructureMap.dll
+C:\git\CQRS\Valtech.Cqrs\bin\Debug\StructureMap.pdb
+C:\git\CQRS\Valtech.Cqrs\bin\Debug\StructureMap.xml
+C:\git\CQRS\Valtech.Cqrs\obj\Debug\Valtech.Cqrs.csprojResolveAssemblyReference.cache
+C:\git\CQRS\Valtech.Cqrs\obj\Debug\Valtech.Cqrs.dll
+C:\git\CQRS\Valtech.Cqrs\obj\Debug\Valtech.Cqrs.pdb
